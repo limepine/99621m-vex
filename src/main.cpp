@@ -270,12 +270,7 @@ void opcontrol() {
 
   // controller
   // loop to continuously update motors
-  while (true) {
-    if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_A)) {
-      console.println("Running selected autonomous...");
-      selector.run_auton();
-      pros::delay(50);
-    }
+  
     
 
     // get joystick positions
