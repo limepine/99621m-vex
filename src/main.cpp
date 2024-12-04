@@ -183,7 +183,7 @@ void initialize() {
          if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_L1)) {
           
             if (!colorSort) {
-                intakemotors.move_voltage(-127);  // Changed to negative for intake
+                intakemotors.move_velocity(-200);  // Changed to negative for intake
                 if (redAlliance) {
                     if (sortOpt.get_hue() > 200 && sortOpt.get_hue() < 260) {
                         // Blue ring detected when on red alliance
@@ -200,7 +200,7 @@ void initialize() {
             } else {
                         intakemotors.brake();
                         pros::delay(50);
-                        intakemotors.move_voltage(-127);  // Resume intake
+                        intakemotors.move_velocity(-200);  // Resume intake
                         pros::delay(300);
 						colorSort = false;
 			}
